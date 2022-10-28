@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+        <div class="col-lg-5 d-none d-lg-block">
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.ida.cl%2Fseguridad%2Faceptamos-las-politicas-de-privacidad%2F&psig=AOvVaw0x-iKiY6IW2U3SB1OhC0Fu&ust=1664964245260000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCKi3iKipxvoCFQAAAAAdAAAAABAD" class="img-fluid" alt="Responsive image" ></div>
+        <div class="col-lg-7">
+          <div class="p-5">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4">Politicas de Privacidad y Condiciones de Uso</h1>
+            </div>
+            
+            <p>
+              El Manual de Políticas de Seguridad y Privacidad de la Información del Ministerio de 
+              Comercio, Industria y Turismo - MinCIT reúne las políticas y directrices institucionales, 
+              y los estándares de seguridad de información y protección de datos personales, que son el 
+              marco para la implementación de los procedimientos y controles de seguridad y privacidad 
+              de información.
+            </p>
+            <!--Fomulario de Registro recupera los valores del name en la ruta del action
+            <form class="user" action="/usuarios" method="POST">
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <input type="text" class="form-control form-control-user mb-3" id="nombre1" name="nombre" placeholder="Nombres">
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control form-control-user mb-3" id="nombre2" name="apellido" placeholder="Apellidos">
+                </div>
+              </div>
+            -->
+            
+              
+            <!--  <hr>
+              <a href="index.html" class="btn btn-google btn-user btn-block">
+                <i class="fab fa-google fa-fw"></i> Register with Google
+              </a>
+              <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+              </a>
+            </form>
+            <hr> 
+          </form>
+            <hr>
+          
+            <div class="text-center">
+              <a class="small" href="#">Olvido su Contraseña?</a>
+            </div>
+            
+            -->
+            <hr>
+            <div class="text-center">
+              <a class="btn btn-outine-primary" href="{{url_for('registro')}}">Registrarme</a>
+            </div>
+            <hr>
+<!--
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+
+        <div class="alert alert-dismissible alert-warning">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <h4 class="alert-heading">Alerta!!!</h4>
+          <p class="mb-0">
+            {{ message }}
+          </p>
+        </div>
+       
+  
+        {% endfor %}
+        {% endif %}
+        {% endwith %}     
+
+      -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

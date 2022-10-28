@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row p-5">
+        <div class="col-lg-5 d-none d-lg-block" >
+          <img src="https://instagramers.com/wp-content/uploads/2020/04/instagram-recuperacio%CC%81n-cuenta-1080x675.jpg" class="img-fluid" alt="Responsive image" ></div>
+        <div class="col-lg-7">
+          <div class="p-2">
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4">Restablecer Contraseña</h1>
+            </div>
+
+            <!--Fomulario de Registro recupera los valores del name en la ruta del action-->
+            <form class="user" action="/cambiarclave" method="POST">
+              <div class="form-group row">
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                  <input type="text" class="form-control form-control-user mb-3" id="nombre1" name="username" value="{{ userdata }}" placeholder="Ingresar Usuario">
+                </div>
+
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                  <input type="password" class="form-control form-control-user mb-3" id="p1" name="p1" placeholder="Ingresar Contraseña">
+                </div>
+
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                  <input type="password" class="form-control form-control-user mb-3" id="p2" name="p2" placeholder="Repetir Contraseña">
+                </div>
+                
+              </div>
+
+              <button class="btn btn-primary btn-user btn-block btn " type="submit">Cambiar</button>
+
+            <!--  <hr>
+              <a href="index.html" class="btn btn-google btn-user btn-block">
+                <i class="fab fa-google fa-fw"></i> Register with Google
+              </a>
+              <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+              </a>
+            </form>
+            <hr> -->
+          </form>
+            <hr>
+          <!--
+            <div class="text-center">
+              <a class="small" href="#">Olvido su Contraseña?</a>
+            </div>-->
+            <div class="text-center">
+              <a class="btn btn-outine-primary" href="{{url_for('login')}}">Ingresar al Sistema</a>
+            </div>
+            <hr>
+        <!-- Construción de mensaje alerta para indicar errores al momento de 
+          registrarse o al indicar que se registro corectamente-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+
+        <div class="alert alert-dismissible alert-warning">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <h4 class="alert-heading">Alerta!!!!!!!!!!</h4>
+          <p class="mb-0">
+            {{ message }}
+          </p>
+        </div>
+       
+        {% endfor %}
+        {% endif %}
+        {% endwith %}     
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
